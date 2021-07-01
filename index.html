@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container .text-center">
+        <form class="center_div" action="/prediction" method="POST">
+            <h1>Covid 19 Prediction</h1>
+
+            <div class="mb-3">
+                <label for="exampleFormControlSelect1" id='cough'>Cough?</label>
+                <select class="form-control" id="exampleFormControlSelect1" name='cough'>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlSelect1">Fever?</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="Fever">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlSelect1">Sore Throat?</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="SoreThroat">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlSelect1">Shortness Of Breath?</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="Breathing">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlSelect1">Head ache?</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="headache">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlSelect1">Age 60 or above?</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="Age">
+        <option>Yes</option>
+        <option>No</option>
+        <option>No record</option>
+      </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlSelect1">Gender?</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="Gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlSelect1">Test Indication?</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="Contact">
+        <option>Contact with confirmed</option>
+        <option>Abroad</option>
+        <option>Do not know</option>
+      </select>
+            </div>
+
+            <input class="btn btn-primary" type="submit" value="Predict">
+
+            <br><br>
+            <h3>{{ prediction_text }}
+                <h3>
+        </form>
+    </div>
+
+</body>
+
+</html>
